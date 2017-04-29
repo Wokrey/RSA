@@ -12,9 +12,7 @@ public class Model {
     private BigInteger fEuler;
     Random random = new Random();
 
-//    public RSA(int bitCount){
-//        this.bit = bitCount;
-//    }
+
     public void generateP(){
         setP(BigInteger.probablePrime(bit, random));
     }
@@ -33,7 +31,6 @@ public class Model {
         while (hasMultiplier(e, fEuler) || e.compareTo(fEuler)!=-1 ){
             e = e.nextProbablePrime();
         }
-        // e. = new BigInteger();
     }
 
     public void calcD(){
@@ -79,7 +76,6 @@ public class Model {
         while (lastx.compareTo(BigInteger.ZERO)==-1){
             lastx=lastx.add(euler);
         }
-        System.out.println( new BigInteger("5655").toString() );
         return lastx;
     }
 
